@@ -20,5 +20,5 @@ Building a simple chat application for fun as part of learning more about python
 
 Please feel free to add and contribute
 
-# References
+## References
 1. [Awesome blog by Miguel Grinberg](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
