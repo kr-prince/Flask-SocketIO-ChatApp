@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<title>Flask-SocketIO-Chat</title>
+</head>
+<body>
+	<script type="text/javascript" src={{ url_for('static',filename='/js/socket.io.min.js') }}>
+	</script>
+	<script type="text/javascript" src={{ url_for('static',filename='/js/chatWindow.js') }}>
+	</script>
+
+	<fieldset style="width:60vh; border-width:5px; margin: 0px;">
+		<legend>Chat Box</legend>
+		<div style="width:60vh; margin: 0px;" id="members"><b>Members : </b></div><hr style="height: 2px; background-color: GREY;">
+	    <div id="message_holder" style="overflow-y:scroll; height:60vh; width:60vh;">
+	    	<h1 id="msg1" style='color: #ccc;font-size: 25px;'>Chat Area..</h1>
+	    </div><br>
+	    <div style="width:60vh;">
+	    	<input type="text" id="username" placeholder="User Name" autocomplete="off"/>
+	    	<button id="join_leave" onclick="joinChat()">Join Chat</button>
+	    </div><br>
+	    <div style="width:60vh;">
+	    	<textarea disabled id="typeArea" rows="3" cols="30" placeholder="Type Your Message" onkeypress="sendMessage()"></textarea>
+	    </div><br>
+	</fieldset>
+</body>
+</html>
