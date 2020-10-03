@@ -12,7 +12,6 @@ Building a simple chat application for fun as part of learning more about python
 ![Application Preview](https://github.com/kr-prince/Flask-SocketIO-ChatApp/blob/master/chat.png)
 
 ## TODO
-* Ensure unique usernames in the chat
 * Create Separate Chat Rooms which are exclusive to each other
 * Better UI and styling
 * Add security and session management on both client-server side

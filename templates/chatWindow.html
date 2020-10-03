@@ -9,10 +9,18 @@
 	<title>Flask-SocketIO-Chat</title>
 </head>
 <body>
-	<script type="text/javascript" src={{ url_for('static',filename='/js/socket.io.min.js') }}>
+	<script type="text/javascript" src="/static/js/socket.io.min.js?u={{ last_updated }}">
 	</script>
-	<script type="text/javascript" src={{ url_for('static',filename='/js/chatWindow.js') }}>
+	<script type="text/javascript" src="/static/js/chatWindow.js?u={{ last_updated }}">
 	</script>
+	<link type="text/css" rel="stylesheet" href="/static/styles/chatpage.css?u={{ last_updated }}">
+
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span><br>
+			<p id="modalMessage"></p>
+		</div>
+	</div>
 
 	<fieldset style="width:60vh; border-width:5px; margin: 0px;">
 		<legend>Chat Box</legend>
@@ -25,7 +33,8 @@
 	    	<button id="join_leave" onclick="joinChat()">Join Chat</button>
 	    </div><br>
 	    <div style="width:60vh;">
-	    	<textarea disabled id="typeArea" rows="3" cols="30" placeholder="Type Your Message" onkeypress="sendMessage()"></textarea>
+	    	<textarea disabled id="typeArea" rows="3" cols="30" placeholder="Type Your Message"></textarea>
+	    	<button id="send_message" onclick="sendMessage()">Send</button>
 	    </div><br>
 	</fieldset>
 </body>
